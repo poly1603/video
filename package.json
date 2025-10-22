@@ -1,0 +1,122 @@
+{
+  "name": "@ldesign/video",
+  "version": "1.0.0",
+  "description": "企业级视频播放器插件，支持多框架，HLS/DASH流媒体，弹幕系统，高性能渲染",
+  "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/index.umd.min.js",
+  "jsdelivr": "dist/index.umd.min.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./vue": {
+      "import": "./dist/vue.esm.js",
+      "require": "./dist/vue.cjs.js",
+      "types": "./dist/vue.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react.esm.js",
+      "require": "./dist/react.cjs.js",
+      "types": "./dist/react.d.ts"
+    },
+    "./lit": {
+      "import": "./dist/lit.esm.js",
+      "require": "./dist/lit.cjs.js",
+      "types": "./dist/lit.d.ts"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "ldesign-builder build --watch",
+    "build": "ldesign-builder build",
+    "build:prod": "NODE_ENV=production ldesign-builder build",
+    "analyze": "ldesign-builder build --analyze",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx,.vue",
+    "format": "prettier --write \"src/**/*.{ts,tsx,vue,css}\"",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build:prod"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "keywords": [
+    "video",
+    "video-player",
+    "player",
+    "html5-video",
+    "hls",
+    "dash",
+    "streaming",
+    "danmaku",
+    "subtitle",
+    "vue",
+    "react",
+    "lit",
+    "web-component",
+    "typescript"
+  ],
+  "author": "ldesign",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ldesign/video"
+  },
+  "bugs": {
+    "url": "https://github.com/ldesign/video/issues"
+  },
+  "homepage": "https://github.com/ldesign/video#readme",
+  "peerDependencies": {
+    "hls.js": "^1.4.0 || ^1.5.0",
+    "dashjs": "^4.7.0",
+    "vue": "^3.0.0",
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "lit": "^2.0.0 || ^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "hls.js": {
+      "optional": true
+    },
+    "dashjs": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "lit": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@ldesign/builder": "workspace:*",
+    "@types/node": "^20.11.16",
+    "@types/react": "^18.2.52",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "@vitejs/plugin-react": "^5.0.2",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "dashjs": "^4.7.4",
+    "eslint": "^8.56.0",
+    "hls.js": "^1.5.8",
+    "lit": "^3.1.0",
+    "prettier": "^3.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1",
+    "vue": "^3.4.15"
+  }
+}

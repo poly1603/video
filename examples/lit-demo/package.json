@@ -1,0 +1,21 @@
+{
+  "name": "@ldesign/video-lit-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "launcher dev",
+    "build": "launcher build",
+    "preview": "launcher preview"
+  },
+  "dependencies": {
+    "@ldesign/video": "workspace:*",
+    "lit": "^3.1.0"
+  },
+  "devDependencies": {
+    "@ldesign/launcher": "workspace:*",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0"
+  }
+}
+

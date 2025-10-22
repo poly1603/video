@@ -1,0 +1,11 @@
+/**
+ * 暗黑主题
+ */
+
+.ldesign-video-player.dark {
+  --primary-color: #67c23a;
+  --bg-color: #1a1a1a;
+  --text-color: #e5e5e5;
+  --border-color: rgba(255, 255, 255, 0.15);
+}
+

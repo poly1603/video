@@ -1,0 +1,24 @@
+{
+  "name": "@ldesign/video-vue-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "launcher dev",
+    "build": "launcher build",
+    "preview": "launcher preview",
+    "analyze": "launcher analyze"
+  },
+  "dependencies": {
+    "@ldesign/video": "workspace:*",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@ldesign/launcher": "workspace:*",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "sass": "^1.69.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0"
+  }
+}

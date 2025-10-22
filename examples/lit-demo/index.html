@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lit Video Player Demo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f7fa;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .player-wrapper {
+      background: #000;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .controls {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #409eff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>@ldesign/video Lit 示例</h1>
+
+    <div class="player-wrapper">
+      <ldesign-video-player id="player" src="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8" type="hls" controls
+        style="width: 100%; height: 600px;"></ldesign-video-player>
+    </div>
+
+    <div class="controls">
+      <h3>外部控制</h3>
+      <button onclick="player.play()">播放</button>
+      <button onclick="player.pause()">暂停</button>
+      <button onclick="player.seek(30)">跳转到 30秒</button>
+      <button onclick="player.setVol(0.5)">音量 50%</button>
+      <button onclick="player.requestFullscreen()">全屏</button>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.ts"></script>
+
+  <script>
+    const player = document.getElementById('player');
+
+    player.addEventListener('ready', (e) => {
+      console.log('播放器就绪', e.detail);
+    });
+
+    player.addEventListener('play', () => {
+      console.log('开始播放');
+    });
+
+    player.addEventListener('pause', () => {
+      console.log('暂停播放');
+    });
+  </script>
+</body>
+
+</html>

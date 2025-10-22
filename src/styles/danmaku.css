@@ -1,0 +1,63 @@
+/**
+ * 弹幕样式
+ */
+
+.ldesign-video-danmaku-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.ldesign-video-danmaku-input {
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  z-index: 16;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.ldesign-video-player:hover .ldesign-video-danmaku-input {
+  opacity: 1;
+}
+
+.ldesign-video-danmaku-input input {
+  flex: 1;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.ldesign-video-danmaku-input input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ldesign-video-danmaku-input button {
+  padding: 8px 16px;
+  background: var(--primary-color, #409eff);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.ldesign-video-danmaku-input button:hover {
+  opacity: 0.9;
+}
+

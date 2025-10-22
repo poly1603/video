@@ -1,0 +1,11 @@
+/**
+ * 默认主题
+ */
+
+.ldesign-video-player.default {
+  --primary-color: #409eff;
+  --bg-color: #000;
+  --text-color: #fff;
+  --border-color: rgba(255, 255, 255, 0.2);
+}
+

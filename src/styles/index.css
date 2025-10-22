@@ -1,0 +1,19 @@
+/**
+ * @ldesign/video 样式入口
+ */
+
+@import './player.css';
+@import './controls.css';
+@import './danmaku.css';
+@import './themes/default.css';
+@import './themes/dark.css';
+
+/* Reset */
+.ldesign-video-player *,
+.ldesign-video-player *::before,
+.ldesign-video-player *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+

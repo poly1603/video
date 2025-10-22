@@ -1,0 +1,27 @@
+{
+  "name": "@ldesign/video-react-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "launcher dev",
+    "build": "launcher build",
+    "preview": "launcher preview",
+    "analyze": "launcher analyze"
+  },
+  "dependencies": {
+    "@ldesign/video": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.0"
+  },
+  "devDependencies": {
+    "@ldesign/launcher": "workspace:*",
+    "@types/react": "^18.2.52",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^5.0.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0"
+  }
+}
+
